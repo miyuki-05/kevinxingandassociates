@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kevin Xing &amp; Associates | Accountants in Burwood</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F5F3; --surface:#FFFFFF; --ink:#14262B; --muted:#4D6168; --line:#D3DDD8;
+  --accent:#1F5C4A; --accent-ink:#FFFFFF; --brass:#9A6E14;
+  --serif:'Newsreader',Georgia,'Times New Roman',serif;
+  --sans:'Instrument Sans',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#101A1D; --surface:#17262A; --ink:#E8EFEC; --muted:#9DB0B3; --line:#2A3D41;
+    --accent:#5FC1A0; --accent-ink:#0B1A16; --brass:#D6A94A;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#101A1D; --surface:#17262A; --ink:#E8EFEC; --muted:#9DB0B3; --line:#2A3D41;
+  --accent:#5FC1A0; --accent-ink:#0B1A16; --brass:#D6A94A;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:18px;padding-bottom:18px;flex-wrap:wrap}
+.brand{font:600 21px/1.2 var(--serif);text-decoration:none}
+.brand small{display:block;font:400 13px var(--sans);color:var(--muted)}
+nav{display:flex;gap:22px;font-size:15px}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.hero{padding:72px 0 64px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:start}
+h1{font:400 clamp(36px,5.4vw,60px)/1.08 var(--serif);letter-spacing:-.015em;margin:0 0 22px}
+.lede{font-size:19px;color:var(--muted);max-width:34em;margin:0 0 28px}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);font:600 16px var(--sans);padding:14px 24px;border-radius:6px;text-decoration:none;border:0;cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line);margin-left:10px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:26px}
+.card h2{font:600 22px/1.25 var(--serif);margin:0 0 6px}
+.card p{margin:0 0 16px;color:var(--muted);font-size:15px}
+label{display:block;font:500 14px var(--sans);margin:14px 0 5px}
+input,select,textarea{width:100%;font:400 16px var(--sans);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:11px 12px}
+textarea{min-height:84px;resize:vertical}
+.card .btn{width:100%;margin-top:18px;text-align:center}
+.note{font-size:13px;color:var(--muted);margin:12px 0 0}
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2.sec{font:400 clamp(28px,3.6vw,38px)/1.15 var(--serif);margin:0 0 12px;letter-spacing:-.01em}
+.sub{color:var(--muted);max-width:38em;margin:0 0 36px}
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
+.svc{padding:20px 0;border-top:1px solid var(--line)}
+.svc h3{font:600 20px/1.3 var(--serif);margin:0 0 4px}
+.svc p{margin:0;color:var(--muted);font-size:16px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;counter-reset:s;padding:0;list-style:none;margin:0}
+.steps li{counter-increment:s}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font:600 15px var(--sans);margin-bottom:12px}
+.steps h3{font:600 19px var(--serif);margin:0 0 4px}
+.steps p{margin:0;color:var(--muted);font-size:16px}
+.faq details{border-top:1px solid var(--line);padding:16px 0}
+.faq summary{cursor:pointer;font:600 19px/1.35 var(--serif);list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--brass);font:400 24px/1 var(--sans)}
+.faq details[open] summary::after{content:"\2212"}
+.faq p{margin:10px 0 0;color:var(--muted);max-width:42em}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.contact dl{margin:0}
+.contact dt{font:500 14px var(--sans);color:var(--muted);margin-top:16px}
+.contact dd{margin:2px 0 0;font-size:18px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.draft{background:var(--brass);color:#fff;text-align:center;font:500 13px var(--sans);padding:7px 12px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .draft{color:#101A1D}}
+:root[data-theme="dark"] .draft{color:#101A1D}
+@media (max-width:820px){
+  .hero{padding:44px 0}
+  .hero .wrap,.contact,.services,.steps{grid-template-columns:1fr;gap:28px}
+  .services{gap:0}
+  .btn.ghost{margin:10px 0 0}
+  nav{gap:16px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="draft">Draft preview. Contact details and wording are placeholders until confirmed.</div>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">Kevin Xing &amp; Associates<small>Accountants, Burwood NSW</small></a>
+    <nav aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">Questions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Straightforward accounting for Burwood’s small businesses and families.</h1>
+        <p class="lede">Tax returns, BAS, bookkeeping and business setup, explained in plain language and done on time. Book a free 15-minute chat to find out where you stand.</p>
+        <a class="btn" href="#enquire">Book a free chat</a><a class="btn ghost" href="#services">See services</a>
+      </div>
+      <form class="card" id="enquire" onsubmit="return sendEnquiry(event)">
+        <h2>Tell us what you need</h2>
+        <p>We’ll reply within one business day with a time to talk.</p>
+        <label for="name">Your name</label>
+        <input id="name" name="name" autocomplete="name" required>
+        <label for="contact">Email or phone</label>
+        <input id="contact" name="contact" autocomplete="email" required>
+        <label for="topic">What do you need help with?</label>
+        <select id="topic" name="topic">
+          <option>Individual tax return</option>
+          <option>Sole trader or business tax</option>
+          <option>BAS and GST</option>
+          <option>Bookkeeping (Xero or MYOB)</option>
+          <option>Starting a business</option>
+          <option>Something else</option>
+        </select>
+        <label for="msg">Anything we should know? (optional)</label>
+        <textarea id="msg" name="msg"></textarea>
+        <button class="btn" type="submit">Send enquiry</button>
+        <p class="note">Please don’t include tax file numbers or bank details here. We’ll collect those securely later.</p>
+      </form>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <h2 class="sec">What we help with</h2>
+      <p class="sub">A small practice that handles the paperwork so you can get on with running your life or business.</p>
+      <div class="services">
+        <div class="svc"><h3>Individual tax returns</h3><p>Employees, investors and landlords. We check deductions and lodge accurately.</p></div>
+        <div class="svc"><h3>Business and sole trader tax</h3><p>Annual returns and tax planning for sole traders, partnerships and companies.</p></div>
+        <div class="svc"><h3>BAS and GST</h3><p>Quarterly or monthly lodgements prepared and checked before they go to the ATO.</p></div>
+        <div class="svc"><h3>Bookkeeping</h3><p>Day-to-day records kept up to date in Xero or MYOB, so your numbers are always ready.</p></div>
+        <div class="svc"><h3>Business setup</h3><p>ABN, entity structure, GST registration and getting your accounts set up properly from day one.</p></div>
+        <div class="svc"><h3>Ongoing support</h3><p>A real person to ask when something comes up, like an ATO letter or a big purchase.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2 class="sec">How it works</h2>
+      <p class="sub">No jargon and no surprises on fees.</p>
+      <ol class="steps">
+        <li><h3>Free chat</h3><p>Tell us your situation in 15 minutes. We’ll say whether we’re the right fit.</p></li>
+        <li><h3>Clear quote</h3><p>You get a fixed fee in writing before any work starts.</p></li>
+        <li><h3>We do the work</h3><p>Send documents securely. We prepare everything and check it with you before lodging.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap faq">
+      <h2 class="sec">Common questions</h2>
+      <p class="sub">Not here? Send us a message and we’ll answer.</p>
+      <details><summary>How much do you charge?</summary><p>Fees depend on the work, and we quote a fixed price up front. [Add typical starting prices here.]</p></details>
+      <details><summary>What should I bring to my first meeting?</summary><p>Your most recent tax return if you have one, your ABN if you’re in business, and any ATO letters. We’ll tell you what else is needed when you book.</p></details>
+      <details><summary>Do you work with Xero and MYOB?</summary><p>Yes. We can work in your existing Xero or MYOB file or help you set one up.</p></details>
+      <details><summary>Can I meet online?</summary><p>Yes. We offer in-person meetings in Burwood as well as phone and video calls. [Confirm.]</p></details>
+      <details><summary>What if I’m behind on lodgements?</summary><p>It’s common and fixable. Book a chat and we’ll work out the quickest way to get you up to date.</p></details>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div>
+        <h2 class="sec">Visit or get in touch</h2>
+        <p class="sub">Meetings by appointment.</p>
+      </div>
+      <dl>
+        <dt>Address</dt><dd>[Street address], Burwood NSW 2134</dd>
+        <dt>Phone</dt><dd>[Phone number]</dd>
+        <dt>Email</dt><dd><a href="mailto:hello@example.com.au" id="mail">[email@yourdomain.com.au]</a></dd>
+        <dt>Hours</dt><dd>[Mon to Fri, 9am to 5pm]</dd>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Kevin Xing &amp; Associates. General information only, not personal tax advice.</span>
+    <span>[ABN / registration details]</span>
+  </div>
+</footer>
+
+<script>
+function sendEnquiry(e){
+  e.preventDefault();
+  var f=e.target;
+  var body='Name: '+f.name.value+'\nContact: '+f.contact.value+'\nTopic: '+f.topic.value+'\n\n'+f.msg.value;
+  location.href='mailto:hello@example.com.au?subject='+encodeURIComponent('Website enquiry: '+f.topic.value)+'&body='+encodeURIComponent(body);
+  return false;
+}
+</script>
+</body>
+</html>
